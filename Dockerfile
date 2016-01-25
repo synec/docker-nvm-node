@@ -7,7 +7,7 @@ MAINTAINER Daniel Grabert <docker@synec.de>
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Define node version
-ENV NODE_VERSION=0.12.7
+ENV NODE_VERSION=4.2.4
 
 ENV NVM_DIR=/root/.nvm
 
