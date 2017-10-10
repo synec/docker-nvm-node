@@ -9,7 +9,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ENV NVM_VERSION=0.33.2
 
 # Define node version
-ENV NODE_VERSION=8.4.0
+ENV NODE_VERSION=8.6.0
 
 # Define nvm base dir
 ENV NVM_DIR=/root/.nvm
