@@ -6,10 +6,10 @@ MAINTAINER Daniel Grabert <docker@synec.de>
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Define nvm version
-ENV NVM_VERSION=0.33.2
+ENV NVM_VERSION=0.33.8
 
 # Define node version
-ENV NODE_VERSION=8.9.0
+ENV NODE_VERSION=8.9.3
 
 # Define nvm base dir
 ENV NVM_DIR=/root/.nvm
