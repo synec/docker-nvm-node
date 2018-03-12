@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-MAINTAINER Daniel Grabert <docker@synec.de>
+LABEL MAINTAINER="Daniel Grabert <docker@synec.de>"
 
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -9,7 +9,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ENV NVM_VERSION=0.33.8
 
 # Define node version
-ENV NODE_VERSION=8.9.4
+ENV NODE_VERSION=8.10.0
 
 # Define nvm base dir
 ENV NVM_DIR=/root/.nvm
