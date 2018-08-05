@@ -1,18 +1,9 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 LABEL MAINTAINER="Daniel Grabert <docker@synec.de>"
 
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-
-# Define nvm version
-ENV NVM_VERSION=0.33.8
-
-# Define node version
-ENV NODE_VERSION=8.11.3
-
-# Define nvm base dir
-ENV NVM_DIR=/root/.nvm
 
 # Update apt database
 RUN apt-get update
@@ -21,6 +12,17 @@ RUN apt-get -y dist-upgrade
 
 # Install deps for building nvm
 RUN apt-get install -y wget build-essential python
+
+# Define nvm version
+ENV NVM_VERSION=0.33.11
+
+# Define node version
+ENV NODE_VERSION=10.8.0
+
+# Define nvm base dir
+ENV NVM_DIR=/root/.nvm
+
+RUN mkdir -p $NVM_DIR
 
 # Fetch and install nodejs via nvm
 RUN  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash \
